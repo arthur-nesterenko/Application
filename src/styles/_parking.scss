@@ -1,0 +1,32 @@
+.parking {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid $dark-color;
+}
+
+.place {
+  border: 1px solid $grey-color;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.place-truck {
+  background-color: $place-truck;
+}
+
+.place-disableCar {
+  background-color: $place-disable;
+}
+
+.place-defaultCar {
+  background-color: $place-default;
+}
+

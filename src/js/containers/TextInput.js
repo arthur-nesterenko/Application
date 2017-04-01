@@ -48,7 +48,7 @@ const TextInput = React.createClass( {
             valid = false;
             errorVisible = true;
         }
-        if( value.length === 0 ){
+        if ( value.length === 0 ) {
             message = this.props.errorMessage;
             valid = false;
             errorVisible = true;
@@ -74,7 +74,7 @@ const TextInput = React.createClass( {
 
         const valid = typeof e.target.value === this.props.type;
 
-        this.validation( e.target.value, valid );
+//        this.validation( e.target.value, valid );
     }
     ,
     /**
@@ -88,7 +88,10 @@ const TextInput = React.createClass( {
                     placeholder={this.props.text}
                     onChange={this.handleChange}
                     onBlur={this.handleBlur}
-                    value={this.props.value}/>
+                    value={this.props.value}
+                    data-required-type={this.props.type}
+                />
+
                 <p
                     className={this.state.errorVisible
                         ? 'error-text'
