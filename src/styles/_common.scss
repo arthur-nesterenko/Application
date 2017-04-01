@@ -1,0 +1,40 @@
+.container {
+  box-sizing: content-box; /* 1 */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.container .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+.error-text
+{
+  color:$error-color;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
