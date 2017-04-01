@@ -1,7 +1,9 @@
 'use strict';
 import React, { Component }               from 'react';
-
-
+import FormParking from './components/FormParking';
+/**
+ *
+ */
 export default class App extends React.Component {
 
     constructor( props ) {
@@ -18,7 +20,8 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <h1></h1>
+                <h1>Parking system</h1>
+                <FormParking/>
             </div>
         );
     }
