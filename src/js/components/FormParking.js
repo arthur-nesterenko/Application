@@ -1,7 +1,11 @@
 import React from 'react';
 import TextInput from '../containers/TextInput';
 
-
+/**
+ * TODO: Needs to add validation to each field
+ * @param handleSubmit
+ * @param handleOnChange
+ */
 export default ( { handleSubmit, handleOnChange } ) => (
     <form className="form-horizontal" onSubmit={handleSubmit}>
 
@@ -10,7 +14,6 @@ export default ( { handleSubmit, handleOnChange } ) => (
             <TextInput
                 uniqueName="name"
                 text="Name"
-                required={true}
                 type="string"
                 onChange={handleOnChange}
                 errorMessage="Field must be fill"
@@ -22,7 +25,6 @@ export default ( { handleSubmit, handleOnChange } ) => (
             <TextInput
                 uniqueName="total"
                 text="Total place"
-                required={true}
                 type="number"
                 onChange={handleOnChange}
                 errorMessage="Field must be fill"
@@ -34,7 +36,6 @@ export default ( { handleSubmit, handleOnChange } ) => (
             <TextInput
                 uniqueName="truck"
                 text="Place for truck"
-                required={true}
                 type="number"
                 onChange={handleOnChange}
                 errorMessage="Field must be fill"
@@ -46,19 +47,19 @@ export default ( { handleSubmit, handleOnChange } ) => (
             <TextInput
                 uniqueName="defaultCar"
                 text="Place for sedan car"
-                required={true}
                 type="number"
                 onChange={handleOnChange}
                 errorMessage="Field must be fill"
             />
         </div>
-
+        /**
+         * TODO:  Needs to be reworked this field must be calculated automatically
+         */
         <div className="form-block">
             <label>Place for disable car</label>
             <TextInput
                 uniqueName="disableCar"
                 text="Place for disable car"
-                required={true}
                 type="number"
                 onChange={handleOnChange}
                 errorMessage="Field must be fill"

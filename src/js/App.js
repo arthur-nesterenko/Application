@@ -79,6 +79,7 @@ export default class App extends React.Component {
                         {this.state.listParking.map(
                             item => <Parking
                                 key={generateId()}
+                                name={item.name}
                                 truck={item.truck}
                                 defaultCar={item.defaultCar}
                                 disabledCar={item.disableCar}
